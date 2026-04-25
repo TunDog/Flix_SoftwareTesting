@@ -1,6 +1,6 @@
 <section>
     <header>
-        <h2 class="text-lg font-semibold text-white">
+        <h2 class="text-base font-semibold text-white">
             {{ __('Profile Information') }}
         </h2>
 
@@ -13,7 +13,7 @@
         @csrf
     </form>
 
-    <form method="post" action="{{ route('profile.update') }}" class="mt-6 space-y-6">
+    <form method="post" action="{{ route('profile.update') }}" class="mt-5 space-y-5">
         @csrf
         @method('patch')
 
@@ -47,8 +47,8 @@
             @endif
         </div>
 
-        <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+        <div class="flex items-center justify-between gap-4">
+            <x-primary-button>{{ __('Save changes') }}</x-primary-button>
 
             @if (session('status') === 'profile-updated')
                 <p
@@ -56,7 +56,7 @@
                     x-show="show"
                     x-transition
                     x-init="setTimeout(() => show = false, 2000)"
-                    class="text-sm text-white/60"
+                    class="text-sm text-emerald-200/90"
                 >{{ __('Saved.') }}</p>
             @endif
         </div>

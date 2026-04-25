@@ -1,6 +1,6 @@
-<section class="space-y-6">
+<section class="space-y-5">
     <header>
-        <h2 class="text-lg font-semibold text-white">
+        <h2 class="text-base font-semibold text-white">
             {{ __('Delete Account') }}
         </h2>
 
@@ -34,7 +34,7 @@
                     id="password"
                     name="password"
                     type="password"
-                    class="mt-1 block w-3/4"
+                    class="mt-1 block w-full"
                     placeholder="{{ __('Password') }}"
                 />
 

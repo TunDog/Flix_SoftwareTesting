@@ -1,6 +1,6 @@
 <section>
     <header>
-        <h2 class="text-lg font-semibold text-white">
+        <h2 class="text-base font-semibold text-white">
             {{ __('Update Password') }}
         </h2>
 
@@ -9,7 +9,7 @@
         </p>
     </header>
 
-    <form method="post" action="{{ route('password.update') }}" class="mt-6 space-y-6">
+    <form method="post" action="{{ route('password.update') }}" class="mt-5 space-y-5">
         @csrf
         @method('put')
 
@@ -31,8 +31,8 @@
             <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2" />
         </div>
 
-        <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+        <div class="flex items-center justify-between gap-4">
+            <x-primary-button>{{ __('Update password') }}</x-primary-button>
 
             @if (session('status') === 'password-updated')
                 <p
@@ -40,7 +40,7 @@
                     x-show="show"
                     x-transition
                     x-init="setTimeout(() => show = false, 2000)"
-                    class="text-sm text-white/60"
+                    class="text-sm text-emerald-200/90"
                 >{{ __('Saved.') }}</p>
             @endif
         </div>
