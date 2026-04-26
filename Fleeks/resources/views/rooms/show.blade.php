@@ -24,7 +24,7 @@
                         loading="lazy"
                     />
                 </div>
-                <div class="p-6 space-y-4">
+                <div class="p-6 space-y-7">
                     @if ($room->description)
                         <p class="text-sm text-white/70">{{ $room->description }}</p>
                     @endif
@@ -72,7 +72,7 @@
 
                         <div>
                             <x-input-label for="payment_method" value="Payment method" />
-                            <select id="payment_method" name="payment_method" class="mt-1 block w-full rounded-xl bg-white/10 border border-white/15 text-white focus:border-indigo-400 focus:ring-indigo-400 shadow-sm" required>
+                            <select id="payment_method" name="payment_method" class="p-1.5 mt-1 block w-full rounded-xl bg-white/10 border border-white/15 text-white focus:border-indigo-400 focus:ring-indigo-400 shadow-sm" required>
                                 <option value="" disabled {{ old('payment_method') ? '' : 'selected' }}>Select...</option>
                                 <option value="cash" {{ old('payment_method') === 'cash' ? 'selected' : '' }}>Cash</option>
                                 <option value="gcash" {{ old('payment_method') === 'gcash' ? 'selected' : '' }}>GCash</option>

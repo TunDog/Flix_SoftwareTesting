@@ -122,7 +122,7 @@
                     </button>
                 </div>
 
-                <form method="POST" enctype="multipart/form-data" :action="action()" class="p-6 space-y-4">
+                <form method="POST" enctype="multipart/form-data" :action="action()" class="p-6 space-y-7">
                     @csrf
 
                     <div>
@@ -146,16 +146,7 @@
 
                     <div>
                         <x-input-label for="payment_method" value="Payment method" />
-                      <select id="payment_method" name="payment_method"
-    class="mt-1 block w-full rounded-xl 
-    bg-[#111827] 
-    border border-white/10 
-    text-white 
-    focus:border-yellow-400 
-    focus:ring-yellow-400 
-    shadow-sm
-    hover:border-white/20
-    transition">
+                        <select id="payment_method" name="payment_method" class="p-1.5 mt-1 block w-full rounded-xl bg-[#111827] border border-white/10 text-white focus:border-yellow-400 focus:ring-yellow-400 shadow-smhover:border-white/20 transition">
                             <option value="" disabled {{ old('payment_method') ? '' : 'selected' }}>Select...</option>
                             <option value="cash" {{ old('payment_method') === 'cash' ? 'selected' : '' }}>Cash</option>
                             <option value="gcash" {{ old('payment_method') === 'gcash' ? 'selected' : '' }}>GCash</option>
